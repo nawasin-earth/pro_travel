@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TouristSpotController;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\RankController;
+use App\Models\TouristSpot;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +43,12 @@ Route::get('/rank', [RankController::class, 'index']);
 
 
 //admin
+Route::get('/addnews', [NewsController::class, 'addnews']);
+
+//home เพิ่มแหล่งท่องเที่ยว
+Route::post('/adminhome', [TouristSpotController::class, 'store'])->name('adminhome.store');
+
+// สร้าง route เพิ่มข่าว
+Route::get('/addnews', [NewsController::class, 'create'])->name('news.create');
+Route::post('/addnews', [NewsController::class, 'store'])->name('news.store');
+Route::get('/news/{id}', [NewsController::class, 'show'])->name('news.show');

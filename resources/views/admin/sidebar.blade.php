@@ -4,20 +4,18 @@
         <div class="sidebar-header d-flex align-items-center">
           <div class="title">
 
-            <h1 class="h5">Mark Stephen</h1>
-            <p>Web Designer</p>
-            <li><x-app-layout>
-                     </x-app-layout>
-                     </li>
+
+
+                  
           </div>
         </div>
-        <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+        <!-- Sidebar Navidation Menus-->
         <ul class="list-unstyled">
-                <li class="active"><a href="index.html"> <i class="icon-home"></i>Home </a></li>
-                <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>
-                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-                <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
-                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
+                <li class="active"><a href="/home"> <i class="icon-home"></i>Home </a></li>
+                <li><a href="addnews"> <i class="icon-padnote"></i>News </a></li>
+                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Rank </a></li>
+                <li><a href="forms.html"> <i class="icon-windows"></i>Contact </a></li>
+                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-user"></i>Users </a>
                   <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                     <li><a href="#">Page</a></li>
                     <li><a href="#">Page</a></li>
