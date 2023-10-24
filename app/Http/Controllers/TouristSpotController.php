@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\TouristSpot;
 
 
-
 class TouristSpotController extends Controller
 {
     public function create()
@@ -44,6 +43,12 @@ public function index() {
     $spots = TouristSpot::all();
     return view('touristspot.index', ['spots' => $spots]);
 }
+
+public function showByProvince($province) {
+    $spots = TouristSpot::where('province', $province)->get();
+    return view('touristspot.index', ['spots' => $spots]);
+}
+
 
 
 

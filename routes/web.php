@@ -41,7 +41,8 @@ Route::get('/news', [NewsController::class, 'index']);
 Route::get('/rank', [RankController::class, 'index']);
 
 //แหล่งท่องเที่ยว
-Route::get('/touristspot', [TouristSpotController::class, 'index'])->name('touristspot.index');
+Route::get('/touristspot', [TouristSpotController::class, 'index'])->name('touristspot');
+Route::get('/touristspot/{province?}', [TouristSpotController::class, 'showByProvince'])->name('touristspot.province');
 
 
 

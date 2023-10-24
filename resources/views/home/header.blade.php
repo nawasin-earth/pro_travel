@@ -17,9 +17,9 @@
                            <a class="nav-link" href="rank">Rank</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="favorites">Favorites</a>
+                           <a class="nav-link " href="favorites">Favorites</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                            <a class="nav-link " href="{{route('login')}}">Login</a>
                         </li>
                      </ul>
@@ -56,4 +56,3 @@
                </div>
             </div>
          </div>
-         

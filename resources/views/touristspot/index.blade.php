@@ -5,6 +5,29 @@
    @include('home.homecss')
 
      <style>
+    .mini-navbar {
+        display: flex;
+        justify-content: center; /* จัดวางให้รายการอยู่ตรงกลางของ navbar */
+
+        padding: 10px 20px;
+        list-style-type: none;
+        margin: 0;
+        font-family: Arial, sans-serif;
+       
+    }
+
+    .mini-navbar li {
+        margin: 0 10px;
+    }
+
+    .mini-navbar a {
+        text-decoration: none;
+        color: #333;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
   
 
     .spot-item {
@@ -34,11 +57,18 @@
    </div> 
 
    </head>
-
-
    <body>
      
+   
    <!-- เพิ่มส่วนอื่นๆ ของเว็บไซต์ที่นี่ -->
+ <div>
+   
+   <ul class="mini-navbar">
+    <li><a href="{{ route('touristspot.province', ['province' => 'nongkhai']) }}">Nongkhai</a></li>
+    <li><a href="{{ route('touristspot.province', ['province' => 'Udon Thani']) }}">Udon Thani</a></li>
+    <li><a href="{{ route('touristspot.province', ['province' => 'Bueng Kan']) }}">Bueng Kan</a></li>
+</ul>
+
 
 
     @foreach($spots as $spot)
@@ -51,9 +81,7 @@
 @endforeach
 
 
-
-
-
+</div>
 
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
