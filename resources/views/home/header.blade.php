@@ -17,10 +17,10 @@
                            <a class="nav-link" href="rank">Rank</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link " href="favorites">Favorites</a>
+                           <a class="nav-link" href="favorites">Favorites</a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link " href="contact.html">Contact</a>
+                        <li>
+                           <a class="nav-link " href="{{route('login')}}">Login</a>
                         </li>
                      </ul>
                   </div>
@@ -30,12 +30,11 @@
                <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
                <div class="menu_main">
                   <ul>
-                     <li class="active"><a href="">Home</a></li>
+                     <li class="active"><a href="/">Home</a></li>
                      <li><a href="news">News</a></li>
                      <li><a href="rank">Rank</a></li>
-                     
                      <li><a href="favorites">Favorites</a></li>
-                     <li><a href="contact.html">contact</a></li>
+                     
 
                      @if (Route::has('login'))
 
@@ -57,3 +56,4 @@
                </div>
             </div>
          </div>
+         

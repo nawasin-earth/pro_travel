@@ -16,23 +16,23 @@
                <div class="carousel-inner">
                   <div class="carousel-item active">
                      <div class="container">
-                        <h1 class="banner_taital">Adventure</h1>
-                        <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but the majority have sufferedThere are ma available, but the majority have suffered</p>
-                        <div class="read_bt"><a href="#">Get A Quote</a></div>
+                        <h1 class="banner_taital">Tour Nua Isaan</h1>
+                        <p class="banner_text">Open up a new experience by viewing tourist attractions in 360 degrees.</p>
+                        <div class="read_bt"><a href="{{ route('touristspot') }}">Start traveling</a></div>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="container">
-                        <h1 class="banner_taital">Adventure</h1>
-                        <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but the majority have sufferedThere are ma available, but the majority have suffered</p>
-                        <div class="read_bt"><a href="#">Get A Quote</a></div>
+                        <h1 class="banner_taital">Tour Nua Isaan</h1>
+                        <p class="banner_text">Open up a new experience by viewing tourist attractions in 360 degrees.</p>
+                        <div class="read_bt"><a href="{{ route('touristspot') }}">Start traveling</a></div>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="container">
-                        <h1 class="banner_taital">Adventure</h1>
-                        <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but the majority have sufferedThere are ma available, but the majority have suffered</p>
-                        <div class="read_bt"><a href="#">Get A Quote</a></div>
+                        <h1 class="banner_taital">Tour Nua Isaan</h1>
+                        <p class="banner_text">Open up a new experience by viewing tourist attractions in 360 degrees.</p>
+                        <div class="read_bt"><a href="{{ route('touristspot') }}">Start traveling</a></div>
                      </div>
                   </div>
                </div>
@@ -41,24 +41,97 @@
          <!-- banner section end -->
       </div>
       <!-- header section end -->
+
+
+            <!-- client section start -->
+            <div class="client_section layout_padding">
+         <div class="container">
+            <h1 class="client_taital">Popular</h1>
+            <div class="client_section_2">
+               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="client_main">
+                           <div class="box_left">
+                              <p class="lorem_text">รายละเอียด...</p>
+                           </div>
+                           <div class="box_right">
+                              <div class="client_taital_left">
+                                 <div class="client_img"><img src="images/client-img.png"></div>
+                                 <div class="quick_icon"><img src="images/quick-icon.png"></div>
+                              </div>
+                              <div class="client_taital_right">
+                                 <h4 class="client_name">บึงบัว</h4>
+                                 <p class="customer_text">อุดรธานี</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="client_main">
+                           <div class="box_left">
+                              <p class="lorem_text">รายละเอียด...</p>
+                           </div>
+                           <div class="box_right">
+                              <div class="client_taital_left">
+                                 <div class="client_img"><img src="images/client-img.png"></div>
+                                 <div class="quick_icon"><img src="images/quick-icon.png"></div>
+                              </div>
+                              <div class="client_taital_right">
+                                 <h4 class="client_name">ริมโขง</h4>
+                                 <p class="customer_text">หนองคาย</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="client_main">
+                           <div class="box_left">
+                              <p class="lorem_text">รายละเอียด...</p>
+                           </div>
+                           <div class="box_right">
+                              <div class="client_taital_left">
+                                 <div class="client_img"><img src="images/client-img.png"></div>
+                                 <div class="quick_icon"><img src="images/quick-icon.png"></div>
+                              </div>
+                              <div class="client_taital_right">
+                                 <h4 class="client_name">ไม่รู้</h4>
+                                 <p class="customer_text">บึงกาฬ</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- client section end -->
+
+
       <!-- services section start -->
       <div class="services_section layout_padding">
          <div class="container">
-            <h1 class="services_taital">Services </h1>
-            <p class="services_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
+            <h1 class="services_taital">province </h1>
+            <p class="services_text">See the top tourist attractions in each province.</p>
             <div class="services_section_2">
                <div class="row">
                   <div class="col-md-4">
                      <div><img src="images/img-1.png" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Rafting</a></div>
+                     <div class="btn_main"><a href="#">อุดรธานี...</a></div>
                   </div>
                   <div class="col-md-4">
                      <div><img src="images/img-2.png" class="services_img"></div>
-                     <div class="btn_main active"><a href="#">Hiking</a></div>
+                     <div class="btn_main"><a href="#">หนองคาย...</a></div>
                   </div>
                   <div class="col-md-4">
                      <div><img src="images/img-3.png" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Camping</a></div>
+                     <div class="btn_main"><a href="#">บึงกาฬ...</a></div>
                   </div>
                </div>
             </div>
@@ -94,75 +167,7 @@
          </div>
       </div>
       <!-- blog section end -->
-      <!-- client section start -->
-      <div class="client_section layout_padding">
-         <div class="container">
-            <h1 class="client_taital">Testimonial</h1>
-            <div class="client_section_2">
-               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                     <div class="carousel-item active">
-                        <div class="client_main">
-                           <div class="box_left">
-                              <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                           </div>
-                           <div class="box_right">
-                              <div class="client_taital_left">
-                                 <div class="client_img"><img src="images/client-img.png"></div>
-                                 <div class="quick_icon"><img src="images/quick-icon.png"></div>
-                              </div>
-                              <div class="client_taital_right">
-                                 <h4 class="client_name">Dame</h4>
-                                 <p class="customer_text">Customer</p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="carousel-item">
-                        <div class="client_main">
-                           <div class="box_left">
-                              <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                           </div>
-                           <div class="box_right">
-                              <div class="client_taital_left">
-                                 <div class="client_img"><img src="images/client-img.png"></div>
-                                 <div class="quick_icon"><img src="images/quick-icon.png"></div>
-                              </div>
-                              <div class="client_taital_right">
-                                 <h4 class="client_name">Dame</h4>
-                                 <p class="customer_text">Customer</p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="carousel-item">
-                        <div class="client_main">
-                           <div class="box_left">
-                              <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                           </div>
-                           <div class="box_right">
-                              <div class="client_taital_left">
-                                 <div class="client_img"><img src="images/client-img.png"></div>
-                                 <div class="quick_icon"><img src="images/quick-icon.png"></div>
-                              </div>
-                              <div class="client_taital_right">
-                                 <h4 class="client_name">Dame</h4>
-                                 <p class="customer_text">Customer</p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- client section start -->
+
       <!-- choose section start -->
       <div class="choose_section layout_padding">
          <div class="container">

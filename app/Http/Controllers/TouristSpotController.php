@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\TouristSpot;
 
 
+
 class TouristSpotController extends Controller
 {
     public function create()
@@ -37,6 +38,14 @@ public function store(Request $request)
 
     return back()->with('success', 'Added successfully!');
 }
+
+
+public function index() {
+    $spots = TouristSpot::all();
+    return view('touristspot.index', ['spots' => $spots]);
+}
+
+
 
 
 }

@@ -7,7 +7,6 @@ use App\Http\Controllers\TouristSpotController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\RankController;
-use App\Models\TouristSpot;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +39,10 @@ require __DIR__.'/auth.php';
 
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/rank', [RankController::class, 'index']);
+
+//แหล่งท่องเที่ยว
+Route::get('/touristspot', [TouristSpotController::class, 'index'])->name('touristspot.index');
+
 
 
 //admin
