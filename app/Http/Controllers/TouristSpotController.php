@@ -44,9 +44,23 @@ public function index() {
     return view('touristspot.index', ['spots' => $spots]);
 }
 
+
 public function showByProvince($province) {
     $spots = TouristSpot::where('province', $province)->get();
-    return view('touristspot.index', ['spots' => $spots]);
+    $output = '';
+
+    foreach($spots as $spot) {
+        $output .= '
+            <div class="spot-item">
+                <h2>' . $spot->name . '</h2>
+                <p><strong>Province:</strong> ' . $spot->province . '</p>
+                <p><strong>Description:</strong> ' . $spot->description . '</p>
+                <img src="' . asset($spot->image_path) . '" alt="' . $spot->name . '">
+            </div>
+        ';
+    }
+
+    return response($output);
 }
 
 

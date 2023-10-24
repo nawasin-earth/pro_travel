@@ -63,14 +63,16 @@
    <!-- เพิ่มส่วนอื่นๆ ของเว็บไซต์ที่นี่ -->
  <div>
    
-   <ul class="mini-navbar">
-    <li><a href="{{ route('touristspot.province', ['province' => 'nongkhai']) }}">Nongkhai</a></li>
-    <li><a href="{{ route('touristspot.province', ['province' => 'Udon Thani']) }}">Udon Thani</a></li>
-    <li><a href="{{ route('touristspot.province', ['province' => 'Bueng Kan']) }}">Bueng Kan</a></li>
+ <ul class="mini-navbar">
+    <li><a href="#" onclick="loadSpots('nongkhai')">Nongkhai</a></li>
+    <li><a href="#" onclick="loadSpots('UdonThani')">UdonThani</a></li>
+    <li><a href="#" onclick="loadSpots('BuengKan')">BuengKan</a></li>
 </ul>
 
 
 
+<div id="spotContainer">
+    <!-- ข้อมูลแหล่งท่องเที่ยวจะถูกแสดงที่นี่ -->
     @foreach($spots as $spot)
    <div class="spot-item">
        <h2>{{ $spot->name }}</h2>
@@ -79,9 +81,28 @@
        <img src="{{ asset($spot->image_path) }}" alt="{{ $spot->name }}">
    </div>
 @endforeach
+</div>
+
+    
 
 
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    function loadSpots(province) {
+        $.ajax({
+            url: '/touristspot/' + province,
+            method: 'GET',
+            success: function(data) {
+                $('#spotContainer').html(data);
+            }
+        });
+    }
+</script>
+
 
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
