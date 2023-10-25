@@ -19,9 +19,13 @@
                         <li class="nav-item">
                            <a class="nav-link " href="favorites">Favorites</a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link " href="{{route('login')}}">Login</a>
-                        </li>
+                        @if(Auth::guest()) 
+    <!-- ถ้ายังไม่ได้ล็อกอิน -->
+    <li class="nav-item">
+        <a class="nav-link " href="{{route('login')}}">Login</a>
+    </li>
+@endif
+
                      </ul>
                   </div>
                </nav>

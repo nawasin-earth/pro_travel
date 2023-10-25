@@ -42,15 +42,18 @@ Route::get('/rank', [RankController::class, 'index']);
 
 //แหล่งท่องเที่ยว
 Route::get('/touristspot', [TouristSpotController::class, 'index'])->name('touristspot');
-Route::get('/touristspot/{province?}', [TouristSpotController::class, 'showByProvince'])->name('touristspot.province');
+Route::get('/touristspot/province/{province?}', [TouristSpotController::class, 'showByProvince'])->name('touristspot.province');
+//ดูรายละเอียด
+Route::get('/touristspot/detail/{spot}', [TouristSpotController::class, 'show'])->name('touristspot.detail');
 
 
 
 //admin
 Route::get('/addnews', [NewsController::class, 'addnews']);
 
-//home เพิ่มแหล่งท่องเที่ยว
+//adminhome เพิ่มแหล่งท่องเที่ยว
 Route::post('/adminhome', [TouristSpotController::class, 'store'])->name('adminhome.store');
+
 
 // สร้าง route เพิ่มข่าว
 Route::get('/addnews', [NewsController::class, 'create'])->name('news.create');

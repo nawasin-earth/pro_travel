@@ -175,6 +175,10 @@
         <label for="image_path">Image:</label>
         <input type="file" name="image_path[]" multiple>
 
+        <label for="image_360_path">Image 360:</label>
+        <input type="file" name="image_360_path[]" multiple>
+
+
 
         <button type="submit">Add Tourist Spot</button>
     </form>
@@ -189,6 +193,12 @@
 @endisset
 
 
+@isset($touristSpot->image_360_path)
+    @foreach(json_decode($touristSpot->image_360_path) as $image360Path)
+        <img src="{{ asset('storage/'.$image360Path) }}" alt="{{ $touristSpot->name }} - 360 Image">
+    @endforeach
+@endisset
+
 
 @if (session('success'))
     <div class="alert alert-success">
@@ -200,6 +210,12 @@
 </div>
       </div>
     </div>
+
+
+
+  
+
+    
 
     <!-- JavaScript files-->
     <script src="admincss/vendor/jquery/jquery.min.js"></script>

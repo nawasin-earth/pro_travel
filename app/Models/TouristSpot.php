@@ -13,4 +13,11 @@ class TouristSpot extends Model
     protected $table = 'tourist_spots';
     protected $fillable = ['name', 'description', 'image_path', 'province'];
 
+    public function images()
+{
+    return $this->hasMany(TouristSpotImage::class);
+}
+
+
+
 }

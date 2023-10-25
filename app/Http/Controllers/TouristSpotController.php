@@ -27,16 +27,33 @@ public function store(Request $request)
         foreach ($request->file('image_path') as $image) {
             $imageName = time() . '.' . $image->extension();
             $image->move(public_path('images'), $imageName);
-            $imagePaths[] = $imageName; // เพิ่มเข้าสู่อาร์เรย์
+            $imagePaths[] = $imageName;
         }
     }
 
-    $data['image_path'] = json_encode($imagePaths); // ใช้ JSON เพื่อเก็บอาร์เรย์ของชื่อภาพ
+    $data['image_path'] = json_encode($imagePaths);
 
-    TouristSpot::create($data);
+    $touristSpot = TouristSpot::create($data);
+
+    if ($request->hasFile('image_360_path')) {
+        $image360Paths = [];
+        foreach ($request->file('image_360_path') as $file) {
+            $path = $file->store('images', 'public');
+            $image360Paths[] = $path;
+        }
+        foreach ($image360Paths as $path) {
+            $touristSpot->images()->create([
+                'image_360_path' => $path
+            ]);
+        }
+    }
 
     return back()->with('success', 'Added successfully!');
 }
+
+
+
+
 
 
 public function index() {
@@ -56,6 +73,7 @@ public function showByProvince($province) {
             $firstImagePath = asset('images/' . $imagePaths[0]);
         }
 
+        $output .= '<a href="' . route('touristspot.detail', $spot->id) . '" class="spot-item-link">';
         $output .= '<div class="spot-item">
                         <div class="spot-content">
                             <div class="spot-text">
@@ -74,10 +92,17 @@ public function showByProvince($province) {
                     </div>';
     }
     
-
     return response($output);
 }
 
+
+public function show(TouristSpot $spot) {
+    if (!$spot) {
+        return redirect()->route('touristspot')->with('error', 'Tourist Spot not found.');
+    }
+
+    return view('touristspot.detail', compact('spot'));
+}
 
 
 

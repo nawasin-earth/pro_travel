@@ -79,7 +79,7 @@
  <div>
    
  <ul class="mini-navbar">
-    <li><a href="#" onclick="loadSpots('nongkhai')">Nongkhai</a></li>
+    <li><a href="#" onclick="loadSpots('Nongkhai')">Nongkhai</a></li>
     <li><a href="#" onclick="loadSpots('UdonThani')">UdonThani</a></li>
     <li><a href="#" onclick="loadSpots('BuengKan')">BuengKan</a></li>
 </ul>
@@ -97,6 +97,7 @@
     }
     ?>
 
+<a href="{{ route('touristspot.detail', $spot->id) }}" class="spot-item-link">
     <div class="spot-item">
         <div class="spot-content">
             <!-- ฝั่งซ้าย: ข้อมูลข้อความ -->
@@ -116,25 +117,23 @@
     @endforeach
 </div>
 
-
-    
-
-
 </div>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-    function loadSpots(province) {
-        $.ajax({
-            url: '/touristspot/' + province,
-            method: 'GET',
-            success: function(data) {
-                $('#spotContainer').html(data);
-            }
+function loadSpots(province) {
+    fetch(`/touristspot/province/${province}`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('spotContainer').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
         });
-    }
+}
+
 </script>
 
 
