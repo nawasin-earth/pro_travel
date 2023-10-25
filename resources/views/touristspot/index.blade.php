@@ -74,13 +74,26 @@
 <div id="spotContainer">
     <!-- ข้อมูลแหล่งท่องเที่ยวจะถูกแสดงที่นี่ -->
     @foreach($spots as $spot)
-   <div class="spot-item">
+    <?php 
+    $imagePaths = json_decode($spot->image_path, true); 
+
+    $firstImagePath = '';
+    if ($imagePaths && count($imagePaths) > 0) {
+        $firstImagePath = asset('images/' . $imagePaths[0]);
+    }
+    
+    ?>
+
+    <div class="spot-item">
        <h2>{{ $spot->name }}</h2>
        <p><strong>Province:</strong> {{ $spot->province }}</p>
        <p><strong>Description:</strong> {{ $spot->description }}</p>
-       <img src="{{ asset($spot->image_path) }}" alt="{{ $spot->name }}">
+       @if($firstImagePath)
+           <img src="{{ $firstImagePath }}" alt="{{ $spot->name }}">
+       @endif
    </div>
 @endforeach
+
 </div>
 
     

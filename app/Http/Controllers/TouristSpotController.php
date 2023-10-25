@@ -50,14 +50,20 @@ public function showByProvince($province) {
     $output = '';
 
     foreach($spots as $spot) {
+        $imagePaths = json_decode($spot->image_path); // Decode JSON to get array of image paths
+        $firstImagePath = count($imagePaths) > 0 ? asset('images/' . $imagePaths[0]) : ''; // Get the first image path
+    
         $output .= '
             <div class="spot-item">
                 <h2>' . $spot->name . '</h2>
                 <p><strong>Province:</strong> ' . $spot->province . '</p>
-                <p><strong>Description:</strong> ' . $spot->description . '</p>
-                <img src="' . asset($spot->image_path) . '" alt="' . $spot->name . '">
-            </div>
-        ';
+                <p><strong>Description:</strong> ' . $spot->description . '</p>';
+        
+        if ($firstImagePath) {
+            $output .= '<img src="' . $firstImagePath . '" alt="' . $spot->name . '">';
+        }
+
+        $output .= '</div>';
     }
 
     return response($output);
