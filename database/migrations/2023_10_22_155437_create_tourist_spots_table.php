@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('province');
             $table->text('description');
             $table->string('image_path')->nullable();
+            $table->string('image_360')->nullable();
             $table->timestamps();
         });
     }

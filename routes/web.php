@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TouristSpotController;
+use App\Http\Controllers\PanoramaController;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
@@ -45,6 +46,7 @@ Route::get('/touristspot', [TouristSpotController::class, 'index'])->name('touri
 Route::get('/touristspot/province/{province?}', [TouristSpotController::class, 'showByProvince'])->name('touristspot.province');
 //ดูรายละเอียด
 Route::get('/touristspot/detail/{spot}', [TouristSpotController::class, 'show'])->name('touristspot.detail');
+Route::get('/touristspot/panorama', [TouristSpotController::class, 'show'])->name('touristspot.panorama');
 
 
 
